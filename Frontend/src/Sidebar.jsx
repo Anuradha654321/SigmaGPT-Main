@@ -76,7 +76,9 @@ function Sidebar() {
 
             <ul className="history">
                 {
-                    allThreads?.map((thread, idx) => (
+                    // allThreads?.map((thread, idx) => (
+                        [...allThreads].reverse().map((thread, idx) => (
+
                         <li key={idx} 
                             onClick={(e) => changeThread(thread.threadId)}
                             className={thread.threadId === currThreadId ? "highlighted": " "}
